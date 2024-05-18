@@ -2,6 +2,7 @@ import React from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import "animate.css";
 import { Link } from "react-scroll";
+import Profile from "../../Profile-modified.png";
 
 function Home() {
   return (
@@ -9,16 +10,15 @@ function Home() {
       name="home"
       className="h-screen w-full bg-gradient-to-b from-black via-black to-gray-800 pb-20 "
     >
-      <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
-        <div className="flex flex-col justify-center h-full">
-          <h2 className="text-4xl sm:text-7xl wooden-text  hover:cursor-pointer hover:animate-pulse hover:text-white duration-300">
-            I'm a Full Stack Developer
+      <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-col">
+        <div className="flex flex-col justify-center text-center h-full">
+          <h2 className="text-4xl sm:text-7xl text-white  hover:cursor-pointer  font-Radi  ">
+            <span className="animate-typing">
+              Web Developer Bringing Ideas to Life.
+            </span>
           </h2>
-          <p className="text-white py-4 max-w-md">
-            I have experience in HTML, CSS, JavaScript, React, Node.js, Express,
-            MongoDB, and more.
-          </p>
-          <div>
+
+          {/* <div>
             <Link
               to="portfolio"
               smooth
@@ -30,13 +30,13 @@ function Home() {
                 <IoIosArrowForward size={25} />
               </span>
             </Link>
-          </div>
+          </div> */}
         </div>
-        <div>
+        <div className="z-10">
           <img
-            src="https://via.placeholder.com/300"
+            src={Profile}
             alt="placeholder"
-            className="rounded-2xl mx-auto w-2/3 md:w-full"
+            className="rounded-full mx-auto w-72 h-72 "
           />
         </div>
       </div>

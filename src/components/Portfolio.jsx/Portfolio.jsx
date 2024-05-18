@@ -1,9 +1,9 @@
 import React from "react";
 
-import node from "../../assets/Portfolio/node.png";
-import react from "../../assets/Portfolio/react.png";
-import php from "../../assets/Portfolio/php.jpg";
-import python from "../../assets/Portfolio/python.png";
+import dsa from "../../assets/Portfolio/dsa.jpg";
+import ToDo from "../../assets/Portfolio/ToDo.png";
+import ml from "../../assets/Portfolio/ml.png";
+import Code from "../../assets/Portfolio/Code.jpg";
 import js from "../../assets/Portfolio/Js.png";
 import web from "../../assets/Portfolio/web.png";
 
@@ -11,27 +11,25 @@ function Portfolio() {
   const portfolios = [
     {
       id: 1,
-      src: node,
+      src: dsa,
+      code: "https://github.com/AyushKumar123456789/DSA",
     },
     {
       id: 2,
-      src: react,
+      src: ToDo,
+      demo: "https://mydiary-0o7u.onrender.com/",
+      code: "https://github.com/AyushKumar123456789/MyDiary",
     },
     {
       id: 3,
-      src: php,
+      src: ml,
+      code: "https://github.com/AyushKumar123456789/Sales_forcasting_using_TimeSeriesAnalysis",
     },
     {
       id: 4,
-      src: python,
-    },
-    {
-      id: 5,
-      src: js,
-    },
-    {
-      id: 6,
-      src: web,
+      src: Code,
+      demo: "https://code-helper-1hrj.onrender.com/",
+      code: "https://github.com/AyushKumar123456789/CodeHelper",
     },
   ];
 
@@ -47,19 +45,31 @@ function Portfolio() {
           </p>
           <p className="py-6">Check out some of my work right here</p>
         </div>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0 ">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0 z-10 ">
           {portfolios.map((portfolio) => (
-            <div className="shadow-md shadow-gray-600 rounded-lg">
-              <img
-                src={portfolio.src}
-                alt=""
-                className="portfolio-image rounded-md hover:scale-105 duration-300 w-screen h-30"
-              />
-              <div className="flex items-center justify-center border-t-2">
-                <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
+            <div className="border-2  rounded-lg">
+              <div className="object-cover">
+                <img
+                  src={portfolio.src}
+                  alt=""
+                  className="portfolio-image rounded-md hover:scale-105 duration-300 w-screen h-30"
+                />
+              </div>
+              <div className="flex items-center justify-center ">
+                <button
+                  className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105 "
+                  onClick={() => {
+                    window.open(portfolio.demo);
+                  }}
+                >
                   Demo
                 </button>
-                <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105 ">
+                <button
+                  className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105 "
+                  onClick={() => {
+                    window.open(portfolio.code);
+                  }}
+                >
                   Code
                 </button>
               </div>

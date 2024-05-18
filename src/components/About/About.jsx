@@ -7,28 +7,39 @@ function About() {
       className="w-full h-screen bg-gradient-to-b from-gray-800 to-black text-white"
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
-        <div className="pb-8">
+        <div className="pb-2">
           <p className="text-4xl font-bold inline border-b-4 border-gray-500">
-            About
+            About Me
           </p>
         </div>
         <p className="text-xl mt-20">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam
-          omnis velit, excepturi quasi eligendi dolore maiores consequatur,
-          magni deleniti necessitatibus quis. Voluptatibus temporibus
-          reprehenderit sequi vel non a repudiandae quisquam cupiditate facilis,
-          labore ad quis nulla, eum distinctio repellat explicabo corrupti earum
-          recusandae iusto excepturi. Sit dolorum accusantium alias porro.
+          I'm Ayush, a Computer Science Student at{" "}
+          <a href="https://www.iitism.ac.in/" className="text-blue-500">
+            Indian Institute of Technology , Dhanbad
+          </a>{" "}
+          , My field of Intrest lies in Problem Solving, Web Development and
+          Machine Learning. However, programming is not my only field of
+          interest, I also like to read, click pictures, watch
+          documentaries/Movies and run in my spare time. ,
         </p>
         <br />
         <p className="text-xl">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus
-          consequatur corrupti illum excepturi facilis minus nostrum quos velit
-          voluptatum numquam quis accusantium, odio harum quas maiores laborum
-          quisquam vero voluptatem soluta debitis quo. Unde totam, sequi
-          veritatis consequatur hic error exercitationem eaque quae voluptate
-          doloremque sunt iusto qui alias ut.
+          <p className="font-signature font-bold text-2xl pb-2">
+            My Believe :{" "}
+          </p>
+          “Life's long battles don't always go to the stronger or faster man.
+          But sooner or later, the man who wins is the man who thinks he can.” -
+          Vince Lombardi
         </p>
+        <div className="my-4 w-fit px-4 py-2 rounded-lg bg-gray-950 z-10 border-2 hover:bg-gray-800">
+          <button
+            onClick={() => {
+              window.open("mailto:ayushjitendra28@gmail.com");
+            }}
+          >
+            @ &nbsp; Email Me
+          </button>
+        </div>
       </div>
     </div>
   );

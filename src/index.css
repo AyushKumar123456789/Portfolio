@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&family=Roboto+Slab:wght@100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -15,18 +15,10 @@
   }
 }
 
+
+
 .top-border {
-  background: linear-gradient(90deg,
-      #FFFBDA,
-      #FFEC9E,
-      #FFBB70,
-      #ED9455,
-      #007F73,
-      #4CCD99,
-      #FFC700,
-      #FFF455,
-      #8b5cf6,
-      #c026d3);
+  background: linear-gradient(90deg, #ef4444, #f97316, #f59e0b, #eab308, #84cc16, #22c55e, #06b6d4, #8b5cf6, #c026d3);
   background-size: 400% 400%;
   animation: gradient 8s ease infinite;
 }
@@ -36,6 +28,33 @@
     font-family: "Raleway", sans-serif;
   }
 }
+
+@keyframes typing {
+  0% {
+    width: 0%;
+    visibility: hidden;
+  }
+
+  100% {
+    width: 100%;
+    visibility: visible;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+
+  100% {
+    border-color: white;
+  }
+}
+
+.animate-typing {
+  animation: typing 2s steps(20) infinite alternate, blink 0.7s infinite;
+}
+
 
 .wooden-text {
   font-size: 4rem;

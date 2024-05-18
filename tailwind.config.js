@@ -20,6 +20,7 @@ export default {
 
     fontFamily: {
       signature: ["Dancing Script", "cursive"],
+      Radi: ["Bree Serif", "serif"],
     },
   },
   plugins: [],

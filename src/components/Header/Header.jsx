@@ -25,19 +25,26 @@ function Header() {
     },
     {
       id: 5,
+      link: "Hobbies",
+    },
+    {
+      id: 6,
       link: "contact",
     },
   ];
 
   return (
     <>
-      <div className="w-full h-1 top-border fixed "></div>
-      <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-nav_color-400 border-b ">
-        <div>
-          <h1 className="text-5xl font-signature ml-2 cursor-pointer">Ayush</h1>
+      <div className="w-full h-1 top-border fixed  "></div>
+
+      <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-gray-950 border-b ">
+        <div className="shadow-2xl ">
+          <h1 className="text-5xl font-signature ml-2 cursor-pointer">
+            A<a className=" text-2xl">yush</a>
+          </h1>
         </div>
 
-        <ul className="hidden md:flex  ">
+        <ul className="hidden md:flex ">
           {links.map(({ id, link }) => (
             <li
               key={id}
@@ -52,13 +59,13 @@ function Header() {
 
         <div
           onClick={() => setNav(!nav)}
-          className="cursor-pointer pr-4 z-10 text-gray-500 md:hidden"
+          className="cursor-pointer pr-4 z-30 text-gray-500 md:hidden"
         >
           {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
         </div>
 
         {nav && (
-          <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500">
+          <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500 z-20">
             {links.map(({ id, link }) => (
               <li
                 key={id}

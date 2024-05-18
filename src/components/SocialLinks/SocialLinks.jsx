@@ -2,6 +2,7 @@ import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
+import resume from "../../assets/resume/Ayush.pdf";
 
 function SocialLinks() {
   const links = [
@@ -43,7 +44,7 @@ function SocialLinks() {
           <BsFillPersonLinesFill size={30} />
         </>
       ),
-      href: "",
+      href: resume,
 
       download: true,
     },
@@ -56,7 +57,7 @@ function SocialLinks() {
           <li
             key={id}
             className={
-              "flex justify-between items-center w-40 h-14 px-4 ml-[-100px] opacity-50 hover:ml-[-10px] hover:rounded-lg  hover:bg-nav_color-400 hover:opacity-100  duration-300"
+              "flex justify-between items-center w-40 h-14 px-4 ml-[-100px] opacity-50 hover:ml-[-10px] hover:rounded-lg  hover:bg-blue-500 hover:opacity-100  duration-300"
             }
           >
             <a

@@ -240,7 +240,8 @@
     position: fixed;
     background-color: #169FFF;
     border-radius: 50%;
-    z-index: 1;
+    overflow: hidden;
+    /* z-index: 0; */
 }
 
 @keyframes orbit {
