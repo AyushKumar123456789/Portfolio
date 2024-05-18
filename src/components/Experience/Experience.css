@@ -151,7 +151,7 @@
     right: 0.8em;
     width: 2em;
     height: 2em;
-    background-image: url('../src/assets/Experience/mercury.png');
+    background-image: url('../../assets/Experience/mercury.png');
     background-size: cover;
 }
 
@@ -160,7 +160,7 @@
     right: 2em;
     width: 2em;
     height: 2em;
-    background-image: url('../src/assets/Experience/venus.png');
+    background-image: url('../../assets/Experience/venus.png');
     background-size: cover;
 }
 
@@ -169,7 +169,7 @@
     right: 0em;
     width: 5em;
     height: 5em;
-    background-image: url('../src/assets/Experience/earth.png');
+    background-image: url('../../assets/Experience/earth.png');
     background-size: cover;
 }
 
@@ -178,7 +178,7 @@
     right: 0.2em;
     width: 1.2em;
     height: 1.2em;
-    background-image: url('../src/assets/Experience/moon.png');
+    background-image: url('../../assets/Experience/moon.png');
     background-size: cover;
 }
 
@@ -187,7 +187,7 @@
     right: 3em;
     width: 3em;
     height: 3em;
-    background-image: url('../src/assets/Experience/mars.png');
+    background-image: url('../../assets/Experience/mars.png');
     background-size: cover;
 }
 
@@ -196,7 +196,7 @@
     right: 3em;
     width: 5em;
     height: 5em;
-    background-image: url('../src/assets/Experience/jupiter.png');
+    background-image: url('../../assets/Experience/jupiter.png');
     background-size: cover;
 }
 
@@ -205,7 +205,7 @@
     right: 5em;
     width: 4.5em;
     height: 4.5em;
-    background-image: url('../src/assets/Experience/saturn.png');
+    background-image: url('../../assets/Experience/saturn.png');
     background-size: cover;
 }
 
@@ -214,7 +214,7 @@
     right: 6.5em;
     width: 4em;
     height: 4em;
-    background-image: url('../src/assets/Experience/uranus.png');
+    background-image: url('../../assets/Experience/uranus.png');
     background-size: cover;
 }
 
@@ -223,7 +223,7 @@
     right: 8em;
     width: 4em;
     height: 4em;
-    background-image: url('../src/assets/Experience/venus.png');
+    background-image: url('../../assets/Experience/venus.png');
     background-size: cover;
 }
 
@@ -232,7 +232,7 @@
     right: 10em;
     width: 4em;
     height: 4em;
-    background-image: url('../src/assets/Experience/mercury.png');
+    background-image: url('../../assets/Experience/mercury.png');
     background-size: cover;
 }
 
