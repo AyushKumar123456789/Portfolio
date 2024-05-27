@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
-import sun from "../../assets/Experience/sun.png";
+import react_logo from "../../assets/Experience/react_logo.png";
 import "./Experience.css";
+import { theme_context } from "../../Context/Conetext";
+import Real_Sun from "../../assets/Experience/Real_Sun.svg";
 
 function Experience() {
   const [stars, setStars] = useState([]);
@@ -9,12 +11,14 @@ function Experience() {
     createStars();
   }, []);
 
+  const { current_theme } = theme_context();
+
   function createStars() {
     const starsArray = [];
     for (let i = 0; i < 1000; i++) {
       const star = {
         id: i,
-        top: Math.random() * 100 + "%",
+        top: Math.random() * 99 + 12 + "%",
         left: Math.random() * 100 + "%",
       };
       starsArray.push(star);
@@ -34,23 +38,27 @@ function Experience() {
           </p>
           <p className="py-6">Tech Stack That I Know</p>
         </div>
-        <div className="sky">
-          <div className="container">
-            <div className="sun">
-              <img src={sun} alt="sun"></img>
-            </div>
-            {stars.map((star) => (
+        <div className="sky relative">
+          {current_theme == "light" &&
+            stars.map((star) => (
               <div
                 key={star.id}
                 className="star"
                 style={{
                   top: star.top,
                   left: star.left,
-                  width: ".1px",
-                  height: ".1px",
+                  width: ".2px",
+                  height: "2px",
                 }}
               ></div>
             ))}
+          <div className="container">
+            <div className="sun dark:shadow-yellow-600 ">
+              <img
+                src={current_theme == "light" ? react_logo : Real_Sun}
+                alt="sun"
+              ></img>
+            </div>
             <div className="star ">STARS</div>
             <div className="mercury"></div>
             <div className="venus"></div>
