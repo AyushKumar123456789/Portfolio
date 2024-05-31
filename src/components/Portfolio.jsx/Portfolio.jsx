@@ -13,6 +13,7 @@ function Portfolio() {
       id: 1,
       src: dsa,
       code: "https://github.com/AyushKumar123456789/DSA",
+      demo: "https://ayushkumar-21je0209s-organizatio.gitbook.io/dsa/graphnotes#m-coloring-problem-graph-coloring",
     },
     {
       id: 2,
