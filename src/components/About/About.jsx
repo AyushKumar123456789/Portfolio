@@ -8,8 +8,10 @@ function About() {
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-2">
-          <p className="text-4xl font-bold inline border-b-4 border-gray-500">
-            About Me
+          <p className="text-4xl font-extrabold inline relative">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r  from-gray-500 to-blue-700 border-b-4 border-gray-500">
+              About Me
+            </span>
           </p>
         </div>
         <p className="text-xl mt-20">
