@@ -13,7 +13,7 @@ function Portfolio() {
       id: 1,
       src: dsa,
       code: "https://github.com/AyushKumar123456789/DSA",
-      demo: "https://ayushkumar-21je0209s-organizatio.gitbook.io/untitled/~/changes/efOyeX2C9QTK8nHDBIMw?r=NMJBQ4aCYmg3bJAIIqT7",
+      demo: "https://ayushkumar-21je0209s-organizatio.gitbook.io/untitled/",
     },
     {
       id: 2,
