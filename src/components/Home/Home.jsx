@@ -1,5 +1,6 @@
 import React from "react";
 import { IoIosArrowForward } from "react-icons/io";
+import { SiCodechef, SiCodeforces, SiLeetcode } from "react-icons/si";
 import "animate.css";
 import { Link } from "react-scroll";
 import Profile from "../../Profile-modified.png";
@@ -28,6 +29,29 @@ function Home() {
             className="rounded-full mx-auto w-72 h-72 "
           />
         </div>
+      </div>
+      <div className="flex justify-center space-x-4 mt-10">
+        <a
+          href="https://codeforces.com/profile/MartinKclark"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <SiCodeforces size={40} className="text-white hover:text-gray-500" />
+        </a>
+        <a
+          href="https://www.codechef.com/users/martin_k_clark"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <SiCodechef size={40} className="text-white hover:text-gray-500" />
+        </a>
+        <a
+          href="https://leetcode.com/u/ayushjitendra28/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <SiLeetcode size={40} className="text-white hover:text-gray-500" />
+        </a>
       </div>
     </div>
   );
