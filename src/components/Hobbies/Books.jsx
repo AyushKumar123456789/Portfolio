@@ -1,14 +1,18 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Lottie from "lottie-react";
+import loadingAnimation from "../../assets/LoadinAnimation.json";
 
 function BookReview() {
   const [completedBooks, setCompletedBooks] = useState([]);
   const [readingBooks, setReadingBooks] = useState([]);
-
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
-    axios
-      .get("https://potfolio-backend-p99z.onrender.com/books")
-      .then((response) => {
+    const fetchBookReviews = async () => {
+      try {
+        const response = await axios.get(
+          "https://potfolio-backend-p99z.onrender.com/books"
+        );
         const reviews = response.data;
         // Filter reviews to include only books
         const completed = reviews.filter(
@@ -19,11 +23,29 @@ function BookReview() {
         );
         setCompletedBooks(completed);
         setReadingBooks(reading);
-      })
-      .catch((error) => {
-        console.error("There was an error fetching the reviews!", error);
-      });
+      } catch (error) {
+        console.error("There was an error fetching the Book reviews!", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchBookReviews();
   }, []);
+
+  if (loading) {
+    return (
+      <div className="fixed inset-0 flex items-center justify-center bg-[#212121]">
+        <div className="text-center">
+          <Lottie
+            animationData={loadingAnimation}
+            loop={true}
+            style={{ width: 200, height: 200 }}
+          />
+          <div className="mt-2 text-lg text-white">Processing...</div>
+        </div>
+      </div>
+    );
+  }
 
   // Function to calculate completion percentage (for demonstration)
   const calculateCompletion = (progress, total) => {

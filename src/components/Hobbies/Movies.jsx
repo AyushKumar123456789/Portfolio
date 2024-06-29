@@ -2,26 +2,51 @@ import React, { useState, useEffect } from "react";
 import ReactStars from "react-rating-stars-component";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import axios from "axios";
+import Lottie from "lottie-react";
+import loadingAnimation from "../../assets/LoadinAnimation.json";
 
 function MovieReview() {
   const [watchedReviews, setWatchedReviews] = useState([]);
   const [wishReviews, setWishReviews] = useState([]);
 
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
-    axios
-      .get("https://potfolio-backend-p99z.onrender.com/reviews")
-      .then((response) => {
+    const fetchReviews = async () => {
+      try {
+        const response = await axios.get(
+          "https://potfolio-backend-p99z.onrender.com/reviews"
+        );
         const reviews = response.data;
         // Filter reviews into watched and wish to watch
         const watched = reviews.filter((review) => review.status === "watched");
         const wish = reviews.filter((review) => review.status === "wish");
         setWatchedReviews(watched);
         setWishReviews(wish);
-      })
-      .catch((error) => {
+      } catch (error) {
         console.error("There was an error fetching the reviews!", error);
-      });
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchReviews();
   }, []);
+
+  if (loading) {
+    return (
+      <div className="fixed inset-0 flex items-center justify-center bg-[#212121]">
+        <div className="text-center">
+          <Lottie
+            animationData={loadingAnimation}
+            loop={true}
+            style={{ width: 200, height: 200 }}
+          />
+          <div className="mt-2 text-lg text-white">Processing...</div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gray-900 text-white py-10 px-4">
