@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import ReactStars from "react-rating-stars-component";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import axios from "axios";
@@ -8,7 +9,6 @@ import loadingAnimation from "../../assets/LoadinAnimation.json";
 function MovieReview() {
   const [watchedReviews, setWatchedReviews] = useState([]);
   const [wishReviews, setWishReviews] = useState([]);
-
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -49,8 +49,30 @@ function MovieReview() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white py-10 px-4">
-      <div className="mt-10">
+    <div className="min-h-screen bg-gray-900 text-white  px-4 flex flex-col justify-between">
+      <header>
+        <nav className="flex justify-around mb-8 border-b border-gray-700 py-4 ">
+          <Link
+            to="/"
+            className="text-lg font-semibold text-blue-500 border border-[#ffd700] rounded px-4 py-2 hover:bg-blue-500 hover:text-white transition"
+          >
+            Home
+          </Link>
+          <Link
+            to="/books"
+            className="text-lg font-semibold text-blue-500 border border-[#ffd700] rounded px-4 py-2 hover:bg-blue-500 hover:text-white transition"
+          >
+            Books
+          </Link>
+          <Link
+            to="/blog"
+            className="text-lg font-semibold text-blue-500 border border-[#ffd700]  rounded px-4 py-2 hover:bg-blue-500 hover:text-white transition"
+          >
+            Blog
+          </Link>
+        </nav>
+      </header>
+      <main className="flex-grow mt-10">
         <section>
           <h2 className="text-3xl font-bold mb-4">Watched</h2>
           {watchedReviews.map((review, index) => (
@@ -105,7 +127,10 @@ function MovieReview() {
             </div>
           ))}
         </section>
-      </div>
+      </main>
+      <footer className="text-center py-4 border-t border-gray-700">
+        <p>© 2024 MovieReview. By Ayush Kumar.</p>
+      </footer>
     </div>
   );
 }
