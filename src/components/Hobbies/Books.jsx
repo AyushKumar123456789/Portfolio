@@ -7,7 +7,7 @@ function BookReview() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/books")
+      .get("https://potfolio-backend-p99z.onrender.com/books")
       .then((response) => {
         const reviews = response.data;
         // Filter reviews to include only books

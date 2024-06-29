@@ -9,7 +9,7 @@ function MovieReview() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/reviews")
+      .get("https://potfolio-backend-p99z.onrender.com/reviews")
       .then((response) => {
         const reviews = response.data;
         // Filter reviews into watched and wish to watch
