@@ -30,6 +30,12 @@ function Portfolio() {
       title: "C++ Web Server",
       code: "https://github.com/AyushKumar123456789/HTTP-Server-Using-CPP",
     },
+    {
+      id: 5,
+      title: "Stock Analysis (Open Source)",
+      demo: "https://stock-analysis-frontend-9ab1.onrender.com/",
+      code: "https://github.com/AyushKumar123456789/stock-analysis-backend",
+    },
   ];
 
   return (
