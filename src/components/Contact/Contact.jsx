@@ -10,7 +10,7 @@ const Contact = () => {
         <div className="pb-8 ">
           <p className="text-4xl font-extrabold inline relative">
             <span className="text-transparent bg-clip-text bg-gradient-to-r  from-gray-500 to-blue-700 border-b-4 border-gray-500">
-              Conatact
+              Contact
             </span>
           </p>
           <p className="py-6">Submit the form below to get in touch with me</p>
